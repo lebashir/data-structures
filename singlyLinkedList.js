@@ -112,6 +112,7 @@ class SinglyLinkedList {
         let removed = before.next      
        
         before.next = removed.next
+        removed.next = null;
         this.length--;
         
         return removed;
