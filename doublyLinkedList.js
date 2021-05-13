@@ -19,7 +19,6 @@ class DoublyLinkedList {
         if (!this.head) {
             this.head = newNode;
             this.tail = newNode;
-            this.length++;
         } else {
             this.tail.next = newNode;
             newNode.previous = this.tail;
@@ -28,34 +27,47 @@ class DoublyLinkedList {
         this.length++;
         return this;
     }
-    pop() {
-        if (!this.head) return undefined;
+
+    pop(val) {
+        if (!this.tail) return undefined;
         let poppedNode = this.tail;
         if (this.length === 1) {
             this.head = null;
             this.tail = null;
-        } else {
-            this.tail = poppedNode.previous;
-            this.tail.next = null;
-            poppedNode.previous= null;
-        }
-        
-        this.length--;
+        } 
+        this.tail = poppedNode.previous;
+        this.tail.next = null;
+        poppedNode.previous = null;
+        this.length--; 
         return poppedNode;
+
     }
     shift() {
         if(!this.head) return undefined;
         let shiftedNode = this.head;
         if (this.length === 1) {
             this.head = null;
-            this.tail = null;
-        }else {
-            this.head = shiftedNode.next;
-            this.head.previous = null;
-            shiftedNode.next = null;
-        }
-        
+            this.tail == null;
+        } 
+        this.head = shiftedNode.next;
+        shiftedNode.next = null;
+        this.head.previous = null;
         this.length--;
         return shiftedNode;
-    } 
+    }
+    unshift(val) {
+        let newNode = new Node(val);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.head.previous = newNode;
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+        return this;
+        
+    }
 }
+
