@@ -104,9 +104,9 @@ class SinglyLinkedList {
         
     }
     remove(index) {
-        if (index < 0 || index > this.length) return false;
-        if (index === this.length - 1) return !!this.pop();
-        if (index === 0) return !!this.shift();
+        if (index < 0 || index >= this.length) return false;
+        if (index === this.length - 1) return this.pop();
+        if (index === 0) return this.shift();
 
         let before = this.get(index-1);
         let removed = before.next      

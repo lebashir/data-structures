@@ -15,6 +15,6 @@ List Data Structures that consist of nodes are the foundation for other data str
 
 ## Doubly Linked List
 
-Almost identical to Singly Linked Lists, except every node has another pointer, to the previous node;
+Almost identical to Singly Linked Lists, except every node has another pointer to the previous node;
 
-Doubly Linked List take up more memory than Singly Linked Lists, however they offer more flexibility
+Doubly Linked List take up more memory than Singly Linked Lists, however they offer more flexibility (faster search and )
