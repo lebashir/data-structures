@@ -90,6 +90,29 @@ class DoublyLinkedList {
             return current;
         }
     }
+    set(index, val) {
+        let foundNode = this.get(index);
+        if (foundNode != null) {
+            foundNode.val = val;
+            return true;
+        }
+        return false
+    }
+    insert(index, val) {
+        if(index < 0 || index > this.length) return false;
+        if(index === this.length) !!this.push(val);
+        if (index === 0) !!this.unshift(val);
+
+        let newNode = new Node(val)
+        let beforeNode = this.get(index-1);
+        let afterNode = beforeNode.next
+
+        beforeNode.next = newNode, newNode.previous = beforeNode;
+        newNode.next = afterNode, afterNode.previous = newNode;
+        this.length++; 
+        return true;
+    }
+    
 }
 
  
