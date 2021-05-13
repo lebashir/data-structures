@@ -34,11 +34,13 @@ class DoublyLinkedList {
         if (this.length === 1) {
             this.head = null;
             this.tail = null;
+        } else {
+            this.tail = poppedNode.previous;
+            this.tail.next = null;
+            poppedNode.previous= null;
         }
-        this.tail = poppedNode.previous;
-        this.tail.next = null;
-        poppedNode.previous= null;
-        length--;
+        
+        this.length--;
         return poppedNode;
     }
     shift() {
@@ -47,11 +49,13 @@ class DoublyLinkedList {
         if (this.length === 1) {
             this.head = null;
             this.tail = null;
+        }else {
+            this.head = shiftedNode.next;
+            this.head.previous = null;
+            shiftedNode.next = null;
         }
-        this.head = shiftedNode.next;
-        this.head.previous = null;
-        shiftedNode.next = null;
-        length--;
+        
+        this.length--;
         return shiftedNode;
     } 
 }
