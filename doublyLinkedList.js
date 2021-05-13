@@ -1,3 +1,4 @@
+// Node Constructor
 class Node {
     constructor(val) {
         this.val = val;
@@ -7,6 +8,7 @@ class Node {
 
 }
 
+// List Constructor
 class DoublyLinkedList {
     constructor() {
         this.head = null;
@@ -112,7 +114,22 @@ class DoublyLinkedList {
         this.length++; 
         return true;
     }
+    remove(index) {
+        if (index < 0 || index > this.length) return false;
+        if (index === this.length - 1) return !!this.pop();
+        if (index === 0) return !!this.shift();
+        
+        let before = this.get(index - 1);
+        let removed = before.next;
+        let after = removed.next;
+
+        before.next = after;
+        after.previous = before;
+        this.length--;
+        return removed;
+    }
     
 }
+
 
  
