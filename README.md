@@ -22,8 +22,13 @@ Doubly Linked List take up more memory than Singly Linked Lists, however they of
 
 ## Stacks
 
-A stack is a LIFO data structure
+A stack is a LIFO data structure (Last In First Out)
 
 The last element added to the stack will be the first element removed from the stack
 
 There are several ways to implement a stack. (e.g array, linked list) - Stacks are abstract
+
+
+## Queues
+
+A queue is a FIFO data structure (First In First Out)
