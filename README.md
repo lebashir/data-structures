@@ -62,10 +62,30 @@ Binary Search Trees are a special case of a binary tree. They are used to store 
 
 If we take any node on the tree, all items that are less than the node are located to the left of the node.
 
-### How BSTS work
+### How BSTs Work
 
 - Every parent node has at most **two** children
 - Every node to the left of a parent node is **always less** than the parent
 - Every node to the right of a parent node is **always greater** than the parent
 
 Binary search tree structure makes it easy and fast to look things up and insert things
+
+
+## Tree Traversal
+
+### There are two main ways to traverse a tree
+- Breadth First Search
+- Depth First Search
+
+### Breadth First Search
+
+- Search across the rows of parent nodes (sibling nodes)
+- Go across the tree
+
+### Depth First Search
+
+- Go down tree vertically to search
+- 3 Main Orders styles of DFS:
+    - InOrder
+    - PreOrder
+    - PostOrder
