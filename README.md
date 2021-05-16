@@ -54,6 +54,7 @@
 
 ### Binary Trees
 
+Can have values of any type
 Each Node can have a maximum of 2 children
 
 ## Binary Search Trees
