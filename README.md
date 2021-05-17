@@ -80,13 +80,38 @@ Binary search tree structure makes it easy and fast to look things up and insert
 
 ### Breadth First Search
 
-- Search across the rows of parent nodes (sibling nodes)
-- Go across the tree
+- Search across the rows of parent nodes (sibling nodes).
+- Order of the return data is across the tree sibling rows.
 
 ### Depth First Search
 
-- Go down tree vertically to search
+- Go down tree vertically to search.
 - 3 Main Orders styles of DFS:
     - InOrder
     - PreOrder
     - PostOrder
+
+## Heaps
+
+Heaps are a special kind of tree in which the tree is a complete binary tree.
+
+There are two types of heaps:
+- **MaxBinaryHeap**: Parent nodes are always larger than child nodes.
+- **minBinaryHeap**: Parent nodes are always smaller than child nodes.
+
+## Binary Heaps
+Binary heaps are as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
+
+Binary Heaps are used to implement Priority Queues, which are **very** commonly used data structures.
+Binary heaps are also used quite a bit with **graph traversal** algorithms.
+
+### Max Binary Heaps:
+- Each parent has at most two child nodes.
+- The value of each parent node is **always** greater than its child nodes.
+- The parent is greater than the children, but there are no guarantees between sibling nodes.
+
+### Min Binary Heaps:
+- Each parent has at most two child nodes.
+- The value of each parent node is **always** less than its child nodes.
+- The parent is less than the children, but there are no guarantees between sibling nodes.
+
