@@ -115,3 +115,9 @@ Binary heaps are also used quite a bit with **graph traversal** algorithms.
 - The value of each parent node is **always** less than its child nodes.
 - The parent is less than the children, but there are no guarantees between sibling nodes.
 
+## Hash Tables (Hash Maps)
+
+- Hash tables are used to store *key-value* pairs.
+- They are like arrays, but the keys are not ordered.
+- Hash tables are *fast* for finding values, adding new values, and removing values.
+
