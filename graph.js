@@ -29,19 +29,37 @@ class Graph {
     depthFirstRecursive(start) {
         let result = [];
         let visited = {};
-        const adjacencyList = this.adjacencyList;
-
-        (function dfs(vertex) {
+       
+        const dfs = (vertex) => {
             if(!vertex) return null;
             visited[vertex] = true;
             result.push(vertex);
-            adjacencyList[vertex].forEach(neighbor => {
+            this.adjacencyList[vertex].forEach(neighbor => {
                 if(!visited[neighbor]) {
                     return dfs(neighbor)
                 }
             })
-        })(start)
+        }
+        dfs(start);
+        return result;
+    }
+    depthFirstIterative(start) {
+        const stack = [start];
+        let result = [];
+        let visited = {};
+        let currVertex;
+        visited[start] = true;
 
+        while (stack.length){
+            currVertex = stack.pop();
+            result.push(currVertex);
+            this.adjacencyList[currVertex].forEach(neighbor => {
+                if(!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    stack.push(neighbor)
+                }
+            });   
+        } 
         return result;
     }
 }
