@@ -121,3 +121,24 @@ Binary heaps are also used quite a bit with **graph traversal** algorithms.
 - They are like arrays, but the keys are not ordered.
 - Hash tables are *fast* for finding values, adding new values, and removing values.
 
+## Graphs
+
+- A graph is a collection of nodes and connections.
+ 
+### Essential Graph Terms:
+- **Vertex** - a node
+- **Edge** - connection between nodes
+- **Weighted/Unweighted** - values assigned to distances between vertices
+- **Directed/Undirected** - directions assigned to a distance between vertices
+
+Graphs can be represented in different ways 2 of which are Matrices and Adjacency Lists
+
+### Matrix
+- Take up more space(in sparse graphs)
+- Slower to iterate over the edges
+- Faster to lookup specific edge
+
+### Adjacency List
+- Can take up less space(in sparse graphs)
+- faster to iterate over the edges
+- Can be slower to lookup specific edge
