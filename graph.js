@@ -78,5 +78,6 @@ class Graph {
                 }
             })
         }
+        return result;
     }
 }

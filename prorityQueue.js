@@ -20,9 +20,9 @@ class priorityQueue {
             let parentIdx = Math.floor((idx - 1)/2);
             let parent = this.values[parentIdx];
             if(element.priority <= parent.priority) break;
-            this.values[parentIdx] = element;
-            this.values[idx] = parent;
-            idx = parentIdx;
+                this.values[parentIdx] = element;
+                this.values[idx] = parent;
+                idx = parentIdx;
         }
     }
     dequeue() {
